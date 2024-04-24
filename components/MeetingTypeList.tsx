@@ -99,6 +99,9 @@ const MeetingTypeList = () => {
             onClose={() => setMeetingState(undefined)}
             handleClick={createMeeting}
             title="Create Meeting on Schedule"
+            img={""}
+            btnText={""}
+            btnIcon={""}
           >
             <div className="flex flex-col gap-3">
               <label
@@ -143,7 +146,9 @@ const MeetingTypeList = () => {
             btnText="Copy Meeting Link"
             btnIcon="/icons/copy.svg"
             img="/icons/checked.svg"
-          ></MeetingModal>
+          >
+            {""}
+          </MeetingModal>
         )}
         <MeetingModal
           isOpen={meetingState === "isInstantMeeting"}
@@ -153,7 +158,9 @@ const MeetingTypeList = () => {
           btnText="Start Meeting"
           img={""}
           btnIcon={""}
-        ></MeetingModal>
+        >
+          {""}
+        </MeetingModal>
         <MeetingModal
           isOpen={meetingState === "isJoiningMeeting"}
           onClose={() => setMeetingState(undefined)}
