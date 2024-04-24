@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { useUser } from "@clerk/nextjs";
-import { useStreamVideoClient } from "@stream-io/video-react-sdk";
+import { Call, useStreamVideoClient } from "@stream-io/video-react-sdk";
 import { useToast } from "@/components/ui/use-toast";
 import MeetingModal from "./MeetingModal";
 import { Textarea } from "./ui/textarea";
@@ -143,7 +143,7 @@ const MeetingTypeList = () => {
             btnText="Copy Meeting Link"
             btnIcon="/icons/copy.svg"
             img="/icons/checked.svg"
-          />
+          ></MeetingModal>
         )}
         <MeetingModal
           isOpen={meetingState === "isInstantMeeting"}
@@ -151,13 +151,17 @@ const MeetingTypeList = () => {
           handleClick={createMeeting}
           title="Start an Instant Meeting"
           btnText="Start Meeting"
-        />
+          img={""}
+          btnIcon={""}
+        ></MeetingModal>
         <MeetingModal
           isOpen={meetingState === "isJoiningMeeting"}
           onClose={() => setMeetingState(undefined)}
           handleClick={() => router.push(values.link)}
           title="Enter the meeting link here"
           btnText="Join Meeting"
+          img={""}
+          btnIcon={""}
         >
           <Input
             placeholder="Meeting link"
