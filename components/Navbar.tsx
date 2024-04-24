@@ -11,9 +11,9 @@ const Navbar = ({ appName, logo }: { appName: string; logo: string }) => {
         <Image
           src={logo}
           alt="logo"
-          width={32}
-          height={32}
-          className="max-sm:size-10"
+          width={400}
+          height={400}
+          className="w-9 h-9 max-sm:size-10"
         />
         <p className="text-[26px] font-extrabold text-white max-sm:hidden ">
           {appName}

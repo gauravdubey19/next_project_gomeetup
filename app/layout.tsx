@@ -8,8 +8,8 @@ import "react-datepicker/dist/react-datepicker.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "GOOM",
-  description: "Video Calling/Meeting app",
+  title: "GoMeetUp",
+  description: "Audio & Video Calling/Meeting app",
   icons: { icon: "/icons/logo.svg" },
 };
 
@@ -23,7 +23,7 @@ export default function RootLayout({
       <ClerkProvider
         appearance={{
           layout: {
-            logoImageUrl: "/icons/yoom-logo.svg",
+            logoImageUrl: "/icons/logo-app.svg",
             socialButtonsVariant: "iconButton",
             socialButtonsPlacement: "top",
           },

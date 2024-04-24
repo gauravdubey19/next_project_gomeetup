@@ -4,8 +4,8 @@ import React, { ReactNode } from "react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "GOOM",
-  description: "Video Calling/Meeting app",
+  title: "GoMeetUp",
+  description: "Audio & Video Calling/Meeting app",
   icons: { icon: "/icons/logo.svg" },
 };
 
