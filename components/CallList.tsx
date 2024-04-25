@@ -71,7 +71,13 @@ const CallList = ({
   if (isLoading) return <Loader />;
   return (
     <>
-      <div className="grid grid-cols-2 gap-5 xl:grid-cols-3">
+      <div
+        className={`grid ${
+          type === "previous"
+            ? "grid-cols-2 md:grid-cols-3"
+            : "grid-cols-1 md:grid-cols-2"
+        } gap-5`}
+      >
         {calls && calls.length > 0 ? (
           calls.map((meeting: Call | CallRecording) => (
             <MeetingCard
